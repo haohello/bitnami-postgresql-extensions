@@ -158,6 +158,7 @@ COPY --from=plv8 /opt/bitnami/postgresql/lib/plv8* /opt/bitnami/postgresql/lib/
 
 
 RUN mkdir -p /var/lib/apt/lists/partial \
+  ## runtime dependencies for plv8
   && runtimeDependencies="libc++1 \
   libtinfo5 \
   libc++abi1" \
