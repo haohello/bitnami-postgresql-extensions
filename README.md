@@ -7,5 +7,11 @@ All the usages are the same with [bitnami postgresql docker](https://github.com/
 # TL;DR
 
 ```console
-$ docker run --name postgresql tlcoding/bitnami-postgresql-extensions:13.4.0
+docker run --name pgsqlxts \
+  -p 15435:5432 \
+  -e POSTGRESQL_USERNAME=my_user \
+  -e POSTGRESQL_PASSWORD=password123 \
+  -e POSTGRESQL_DATABASE=my_database \
+  -e POSTGRESQL_POSTGRES_PASSWORD=rootp255 \
+  tlcoding/bitnami-postgresql-extensions:13.4.0
 ```
